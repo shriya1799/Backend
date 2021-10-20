@@ -1,13 +1,13 @@
 <?php
 
-$base=30;
-$height=20;
-$a=10;
 $b=15;
-$c=10;
+$h=20;
+$x=25;
+$y=30;
+$z=30;
 
-$area=($height*$base)/2;
-$p=$a +$b + $c;
+$area=($h*$b)/2;
+$p=$x+$y+$z;
 
 echo "Area of Triangle is :".$area."<br>";
 echo "Perimeter of Triangle is :".$p;

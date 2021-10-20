@@ -5,9 +5,9 @@
 <?php
 
 
-$hr=1;
+$hr=2;
 $min=23;
-$sec=20;
+$sec=21;
 
 
 $seconds = 3600 * $hr + 60 * $min + $sec;
