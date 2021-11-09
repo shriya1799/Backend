@@ -28,6 +28,12 @@
                 </td>
             </tr>
             <tr>
+                <td>
+                <input type="checkbox" name="remember">  
+                <label for="remember-me">Remember me</label>  
+                </td>
+            </tr>
+            <tr>
                 <td  style="padding-bottom: 20px;">
                 <input type="submit" class="btn" name="login" value="LOGIN">
                 <a href="signup.php" class="btn">SIGN UP</a>    
@@ -55,7 +61,14 @@ if(isset($_POST['login']))
     $rows=mysqli_num_rows($query);
     if($rows>0)
     {
-        $_SESSION['email']=$email;
+        if(isset($_POST["remember"]))   
+        {  
+            setcookie ("email",$email);  
+            setcookie ("password",$password);
+            $_SESSION['email']=$email;
+
+        }  
+
         header("Location:dashboard.php");
     }
     else
